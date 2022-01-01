@@ -1,0 +1,4 @@
+requests==2.22.0
+beautifulsoup4==4.9.3
+selenium~=3.141.0
+python-dotenv~=0.19.2
