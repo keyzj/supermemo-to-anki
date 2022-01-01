@@ -9,8 +9,8 @@ from src.service.io_service import write_cards
 from src.service.supermemo_service import get_courses, get_cards
 
 
-def init_logger():
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s %(process)d-%(levelname)s-%(name)s: %(message)s')
+def init_logger(log_level_root):
+    logging.basicConfig(level=log_level_root, format='%(asctime)s %(process)d-%(levelname)s-%(name)s: %(message)s')
 
 
 def read_envs():
@@ -20,14 +20,15 @@ def read_envs():
         'email': os.getenv('EMAIL'),
         'pw': os.getenv('PW'),
         'user_id': os.getenv('USER_ID'),
-        'delimiter': os.getenv('DELIMITER')
+        'delimiter': os.getenv('DELIMITER'),
+        'log_level_root': os.getenv('LOGGING_LEVEL_ROOT', 'INFO')
     }
     return envs
 
 
 def main():
-    init_logger()
     envs = read_envs()
+    init_logger(envs['log_level_root'])
 
     driver = webdriver.Chrome(envs['driver_path'])
 
