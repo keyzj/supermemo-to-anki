@@ -23,11 +23,11 @@ Currently, only plain text content parsed: HTML tags are cleared, no newlines al
 Variables could be passed separately and by '.env' file thanks to [python-dotenv](https://pypi.org/project/python-dotenv/) package.  
 Env file must be located at the same dir as 'main.py'.
 
-| Name                 | Type   | Default value | Description                                                                                                  |
-|----------------------|--------|---------------|--------------------------------------------------------------------------------------------------------------|
-| DRIVER_PATH          | string |               | Path to Selenium webdriver.                                                                                  |
-| EMAIL          | string |               | Email to auth into Supermemo.                                                                                |
-| PW          | string |               | Password to auth into Supermemo.                                                                             |
-| USER_ID          | string |               | User id from Supermemo. Could be obtained from borswer network tab.                                          |
+| Name               | Type   | Default value | Description                                                                                                  |
+|--------------------|--------|---------------|--------------------------------------------------------------------------------------------------------------|
+| DRIVER_PATH        | string |               | Path to Selenium webdriver.                                                                                  |
+| EMAIL              | string |               | Email to auth into Supermemo.                                                                                |
+| PW                 | string |               | Password to auth into Supermemo.                                                                             |
+| USER_ID            | string |               | User id from Supermemo. Could be obtained from borswer network tab.                                          |
 | DELIMITER          | string | ;             | Delimiter to separate front and back of card. Anki supports custom delimiters, but semicolon is recommended. |
-| LOGGING_LEVEL_ROOT          | string | INFO          | Default log level. Debug for verbose logs.                                                                   |
+| LOGGING_LEVEL_ROOT | string | INFO          | Default log level. Debug for verbose logs.                                                                   |
