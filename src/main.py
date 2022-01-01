@@ -20,7 +20,7 @@ def read_envs():
         'email': os.getenv('EMAIL'),
         'pw': os.getenv('PW'),
         'user_id': os.getenv('USER_ID'),
-        'delimiter': os.getenv('DELIMITER'),
+        'delimiter': os.getenv('DELIMITER', ';'),
         'log_level_root': os.getenv('LOGGING_LEVEL_ROOT', 'INFO')
     }
     return envs
